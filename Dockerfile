@@ -8,12 +8,7 @@ RUN \
   apt-get -y clean && \
   rm -rf /var/lib/apt/lists/*
   
-ENV \
-  SUPERVISORD_EXIT_ON_FATAL=1 \
-  LC_ALL=en_GB.UTF-8 \
-  LANG=en_GB.UTF-8 \
-  LANGUAGE=en_GB.UTF-8 \
-  TZ=Europe/London
+ENV UPSTREAM_DNS 8.8.8.8 8.8.4.4
   
 COPY overlay/ /
 
